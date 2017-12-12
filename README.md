@@ -5,20 +5,14 @@ Provides a Dockerfile to generate small docker container for the human-friendly 
 ## Usage
 
 ```
-$ docker run -it httpie:0.9.9-alpine HEAD https://www.dreamlines.de
-
-HTTP/1.1 200 OK
-CF-Cache-Status: HIT
-CF-RAY: 368188731eb53cc5-CPH
-Cache-Control: public, max-age=14400
-Connection: keep-alive
-Content-Encoding: gzip
+docker run -it k0pernikus/httpie-docker-alpine:1.0.0 HEAD google.com
+HTTP/1.1 302 Found
+Cache-Control: private
+Content-Length: 268
 Content-Type: text/html; charset=UTF-8
-Date: Thu, 01 Jun 2017 10:36:38 GMT
-Expires: Thu, 01 Jun 2017 14:36:38 GMT
-Server: cloudflare-nginx
-Set-Cookie: __cfduid=dbc9fece5890a8587726b8806db3826fe1496313398; expires=Fri, 01-Jun-18 10:36:38 GMT; path=/; domain=.dreamlines.de; HttpOnly
-link: <https://www.dreamlines.de/wp-json/>; rel="https://api.w.org/", <https://www.dreamlines.de/>; rel=shortlink
-vary: Accept-Encoding
-x-pingback: https://www.dreamlines.de/xmlrpc.php
+Date: Tue, 12 Dec 2017 16:10:11 GMT
+Location: http://www.google.de/?gfe_rd=cr&dcr=0&ei=Y_8vWoKnI8P38Afb-7jIAg
+Referrer-Policy: no-referrer
 ```
+
+For further information on how to use httpie, check [httpie documentation](https://httpie.org/doc).
