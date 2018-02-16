@@ -1,6 +1,6 @@
-FROM alpine:3.6
+FROM alpine:3.7
 MAINTAINER Philipp Kretzschmar <philipp.kretzschmar@gmail.com>
-ENV LAST_UPDATED=2017-06-01
+ENV LAST_UPDATED=2018-02-16
 ARG XDG_CACHE_HOME=/tmp/cache/
 RUN apk update && \
     apk add py-pip && pip install httpie && \
